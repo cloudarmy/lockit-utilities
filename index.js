@@ -74,13 +74,17 @@ exports.restrict = function(config) {
  * @returns {Object} Object containing database `type` and `adapter`
  */
 exports.getDatabase = function(config) {
+  let prot;
+  const uri = config.db.url;
+  if(uri){
+    const urlObj = url.parse(uri);
+    prot = urlObj.protocol;
+  } else if(config.db) {
+    prot = config.db.dialect || '' + ':'
+  }
 
-  var uri = config.db.url || config.db;
 
-  var urlObj = url.parse(uri);
-  var prot = urlObj.protocol;
-
-  var res = {};
+  const res = {};
 
   switch (prot) {
     case 'http:':

@@ -21,11 +21,11 @@
     "url": "https://github.com/zemirco/lockit-utilities"
   },
   "devDependencies": {
-    "mocha": "^2.2.5",
-    "should": "^7.0.1"
+    "mocha": "^8.1.3",
+    "should": "^13.2.3"
   },
   "dependencies": {
-    "notp": "^2.0.2",
-    "thirty-two": "0.0.2"
+    "notp": "^2.0.3",
+    "thirty-two": "1.0.2"
   }
 }

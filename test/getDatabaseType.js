@@ -7,7 +7,7 @@ describe('getDatabaseType()', function() {
 
   it('should work for CouchDB', function(done) {
     var config = {
-      db: 'http://127.0.0.1:5984/test'
+      db:{url: 'http://127.0.0.1:5984/test'}
     };
     var db = utls.getDatabase(config);
     db.type.should.equal('couchdb');
