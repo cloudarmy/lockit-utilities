@@ -79,8 +79,8 @@ exports.getDatabase = function(config) {
   if(uri){
     const urlObj = url.parse(uri);
     prot = urlObj.protocol;
-  } else if(config.db) {
-    prot = config.db.dialect || '' + ':'
+  } else if(config.db.dialect) {
+    prot = config.db.dialect + ':'
   }
 
 
